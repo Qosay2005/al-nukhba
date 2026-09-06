@@ -54,7 +54,7 @@ export default function Navbar() {
           </NavLink>
         </div>
 
-        <nav dir="rtl" className="hidden items-center justify-center gap-8 lg:flex" aria-label="التنقل الرئيسي">
+        <nav dir="rtl" className="hidden text-center items-center justify-center gap-8 lg:flex" aria-label="التنقل الرئيسي">
           {navLinks.map((link) => (
             <NavLink key={link.path} to={link.path} className={navLinkClasses}>
               {link.label}
