@@ -1,0 +1,25 @@
+@config "../tailwind.config.js";
+@import "tailwindcss";
+
+@layer base {
+	:root {
+		font-family: 'IBM Plex Sans Arabic', sans-serif;
+		color: #ede6d6;
+		background-color: #0a0a0a;
+	}
+
+	body {
+		min-width: 320px;
+		margin: 0;
+		background-color: #0a0a0a;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Amiri', serif;
+	}
+}
