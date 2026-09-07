@@ -5,23 +5,28 @@ export default function Studio() {
     {
       name: 'رجال',
       items: [
+        /*
         {
           id: 1,
           type: 'image',
           src: '/images/studio/men-1.jpg',
           alt: 'تصوير رجال',
         },
+        */
       ],
     },
     {
       name: 'نساء',
       items: [
+        /*
         {
+          
           id: 2,
           type: 'image',
           src: '/images/studio/women-1.jpg',
           alt: 'تصوير نساء',
         },
+        */
       ],
     },
   ]

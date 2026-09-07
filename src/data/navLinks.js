@@ -3,5 +3,6 @@ export const navLinks = [
   { label: 'سفرجية', path: '/sofrajiya' },
   { label: 'دي جي', path: '/dj' },
   { label: 'ستوديو', path: '/studio' },
-  { label: 'لوازم أعراس', path: '/wedding-supplies' },
+  { label: 'تزيين', path: '/decoration' },
+  { label: 'لوازم الأعراس', path: '/wedding-supplies' },
 ]

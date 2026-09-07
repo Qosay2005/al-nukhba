@@ -3,7 +3,8 @@ import Home from "./pages/Home"
 import Sofrajiya from "./pages/Sofrajiya"
 import Dj from "./pages/Dj"
 import Studio from "./pages/Studio"
-import WeddingSupplies from "./pages/WeddingSupplies"
+import Decoration from "./pages/Decoration"
+import WeddingSupplies from "./pages/Wedding_supplies"
 import MainLayout from "./layouts/MainLayout"
 const router = createBrowserRouter([
   {
@@ -24,8 +25,11 @@ const router = createBrowserRouter([
             path: "studio",
             element: <Studio />,
         },{
-            path: "wedding-supplies",
-            element: <WeddingSupplies />,
+            path: "decoration",
+            element: <Decoration />,
+        },{
+            path:"wedding-supplies",
+            element:<WeddingSupplies />
         }
 
     ]
