@@ -1,6 +1,6 @@
 import ServiceGalleryPage from '../components/ServiceGalleryPage'
 import video from '../assets/sofra/men/video_1.mp4'
-import img_1 from '../assets/sofra/woman/img_1.png'
+import img_1 from '../assets/sofra/woman/img_1.PNG'
 export default function Sofrajiya() {
   const categories = [
     {
