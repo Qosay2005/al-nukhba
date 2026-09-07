@@ -28,6 +28,19 @@ export default function Decoration() {
         */
       ],
     },
+     {
+      name: 'تزيين سيارات',
+      items: [
+        /*
+        {
+          id: 2,
+          type: 'image',
+          src: '/images/wedding/henna-1.jpg',
+          alt: 'تزيين قاعات حناء',
+        },
+        */
+      ],
+    },
   ]
 
   return (

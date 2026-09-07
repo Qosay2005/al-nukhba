@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'motion/react'
 import { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
 
@@ -100,14 +101,27 @@ export default function ServiceGalleryPage({ title, description, categories }) {
   return (
     <main dir="rtl" className="min-h-screen bg-bg-base px-5 pb-20 pt-32 sm:px-8 lg:pt-40">
       <div className="mx-auto max-w-7xl">
-        <header className="mx-auto max-w-3xl text-center">
+        <motion.header
+          className="mx-auto max-w-3xl text-center"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.55, ease: 'easeOut' }}
+        >
           <p className="mb-4 text-xs font-medium tracking-[0.25em] text-gold sm:text-sm">شركة النخبة</p>
           <h1 className="font-heading text-4xl leading-normal text-ivory sm:text-5xl">{title}</h1>
           <div className="mx-auto my-7 h-px w-20 bg-gold" aria-hidden="true" />
           <p className="text-sm leading-8 text-ivory/65 sm:text-base">{description}</p>
-        </header>
+        </motion.header>
 
-        <nav className="mx-auto mt-12 flex max-w-md items-center justify-center gap-2 border-b border-gold-dark/30" aria-label="تصنيفات المعرض">
+        <motion.nav
+          className="mx-auto mt-12 flex max-w-md items-center justify-center gap-2 border-b border-gold-dark/30"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.08, ease: 'easeOut' }}
+          aria-label="تصنيفات المعرض"
+        >
           {categories.map((category) => (
             <button
               key={category.name}
@@ -126,13 +140,24 @@ export default function ServiceGalleryPage({ title, description, categories }) {
               />
             </button>
           ))}
-        </nav>
+        </motion.nav>
 
-        <div className="mt-10 columns-1 gap-4 transition-opacity duration-500 sm:columns-2 lg:columns-3">
-          {activeItems.map((item) => (
-            <GalleryItem key={item.id} item={item} onOpen={setSelectedItem} />
-          ))}
-        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory.name}
+            className="mt-10 columns-1 gap-4 sm:columns-2 lg:columns-3"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
+          >
+            {activeItems.map((item) => (
+              <GalleryItem key={item.id} item={item} onOpen={setSelectedItem} />
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       {selectedItem && <Lightbox item={selectedItem} onClose={() => setSelectedItem(null)} />}
