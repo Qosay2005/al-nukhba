@@ -24,10 +24,10 @@ export default function Home() {
 
       <div className="relative z-10 flex max-w-4xl flex-col items-center">
         <p className="mb-5 font-body text-xs font-medium tracking-[0.25em] text-gold sm:text-sm">
-          سفرجية النخبة
+          شركة النخبة
         </p>
         <h1 className="max-w-3xl font-heading text-4xl leading-normal text-ivory sm:text-5xl sm:leading-[1.45] lg:text-6xl">
-          طاقم النخبة لتلبية جميع مناسباتكم السعيدة
+          شركة النخبة لتلبية جميع مناسباتكم السعيدة
         </h1>
         <div className="my-8 h-px w-24 bg-gold sm:my-10" aria-hidden="true" />
         <Link

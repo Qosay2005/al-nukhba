@@ -50,7 +50,7 @@ export default function Navbar() {
               alt="شعار سفرجية النخبة"
               className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-20"
             />
-             <span className="font-heading text-xl font-bold tracking-wide text-gold sm:text-2xl">طاقم النخبة</span>
+             <span className="font-heading text-xl font-bold tracking-wide text-gold sm:text-2xl">شركة النخبة</span>
           </NavLink>
         </div>
 

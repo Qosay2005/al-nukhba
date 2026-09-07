@@ -17,16 +17,16 @@ export default function Footer() {
           <NavLink
             to="/"
             className="group flex items-center"
-            aria-label="طاقم النخبة - الرئيسية"
+            aria-label="شركة النخبة - الرئيسية"
           >
             <img
               src={Logo}
-              alt="شعار طاقم النخبة"
+              alt="شعار شركة النخبة"
               className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-20"
             />
 
             <span className="font-heading text-xl font-bold tracking-wide text-gold sm:text-2xl">
-              طاقم النخبة
+              شركة النخبة
             </span>
           </NavLink>
         </div>
@@ -83,7 +83,7 @@ export default function Footer() {
       <div className="mx-auto mt-10 max-w-7xl border-t border-gold-dark/20 pt-5">
         <div className="flex flex-col items-center justify-center gap-2 text-center">
           <p className="text-xs text-ivory/50">
-            © 2026 طاقم النخبة. جميع الحقوق محفوظة.
+            © 2026 شركة النخبة. جميع الحقوق محفوظة.
           </p>
 
           <p className="text-xs text-ivory/50">
