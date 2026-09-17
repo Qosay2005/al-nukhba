@@ -1,31 +1,110 @@
 import { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
 
-import img_1 from '../assets/dj/men/img_1.jpeg'
-import video from '../assets/video.mp4'
-
+import img_1C from '../assets/decoration/img_1C.jpeg'
+import img_2C from '../assets/decoration/img_2C.jpeg'
+import img_3C from '../assets/decoration/img_3C.jpeg'
+import img_4C from '../assets/decoration/img_4C.jpeg'
+import img_5C from '../assets/decoration/img_5C.jpeg'
+import img_6C from '../assets/decoration/img_6C.jpeg'
+import img_7C from '../assets/decoration/img_7C.jpeg'
+import img_8C from '../assets/decoration/img_8C.jpeg'
+import img_9C from '../assets/decoration/img_9C.jpeg'
+import img_10C from '../assets/decoration/img_10C.jpeg'
+import img_11C from '../assets/decoration/img_11C.jpeg'
+import img_12C from '../assets/decoration/img_12C.jpeg'
+import img_13C from '../assets/decoration/img_13C.jpeg'
+import video_1C from '../assets/decoration/video_1C.mp4'
+import video_2C from '../assets/decoration/video_2C.mp4'
 const mediaItems = [
-  /*
+  
   {
     id: 1,
     type: 'image',
-    src: img_1,
+    src: img_1C,
     alt: 'لوازم أعراس',
   },
   {
     id: 2,
     type: 'image',
-    src: img_2,
+    src: img_2C,
     alt: 'لوازم أعراس',
   },
   
   {
     id: 3,
-    type: 'video',
-    src: video,
-    alt: 'فيديو لوازم الأعراس',
+    type: 'image',
+    src: img_3C,
+    alt: 'لوازم أعراس',
   },
-  */
+  {
+    id: 4,
+    type: 'image',
+    src: img_4C,
+    alt: 'لوازم أعراس',
+  },
+  {
+    id: 5,
+    type: 'image',
+    src: img_5C,
+    alt: 'لوازم أعراس',
+  },
+  {
+    id: 6,
+    type: 'image',
+    src: img_6C,
+    alt: 'لوازم أعراس',
+  },
+  {
+    id: 7,
+    type: 'image',
+    src: img_7C,
+    alt: 'لوازم أعراس',
+  },
+  {
+    id: 8,
+    type: 'image',
+    src: img_8C,
+    alt: 'لوازم أعراس',
+  },
+  {
+    id: 9,
+    type: 'image',
+    src: img_9C,
+    alt: 'لوازم أعراس',
+  },
+  {
+    id: 10,
+    type: 'image',
+    src: img_10C,
+    alt: 'لوازم أعراس',
+  },
+  {
+    id: 11,
+    type: 'image',
+    src: img_11C,
+    alt: 'لوازم أعراس',
+  },{
+    id: 12,
+    type: 'video',
+    src: video_1C,
+    alt: 'لوازم أعراس',
+  },{
+    id: 13,
+    type: 'video',
+    src: video_2C,
+    alt: 'لوازم أعراس',
+  },{
+    id: 14,
+    type: 'image',
+    src: img_12C,
+    alt: 'لوازم أعراس',
+  },{
+    id: 15,
+    type: 'image',
+    src: img_13C,
+    alt: 'لوازم أعراس',
+  }
 ]
 
 export default function Wedding_supplies() {

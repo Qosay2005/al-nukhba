@@ -1,5 +1,6 @@
 import ServiceGalleryPage from '../components/ServiceGalleryPage'
 import img_1 from '../assets/dj/men/img_1.jpeg'
+import img_2 from '../assets/dj/woman/img_2.jpg'
 export default function Dj() {
   const categories = [
     {
@@ -17,14 +18,14 @@ export default function Dj() {
       name: 'نساء',
       items: [
        
-        /*
+        
         {
-          id: 2,
-          type: 'video',
-          src: '/videos/dj/women-1.mp4',
+          id: 1,
+          type: 'image',
+          src: img_2,
           alt: 'دي جي نساء',
         },
-        */
+        
        
       ],
     },
