@@ -28,11 +28,28 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
+
     if (!isMenuOpen) return
+
     const handleKey = (e) => e.key === 'Escape' && setIsMenuOpen(false)
+
     window.addEventListener('keydown', handleKey)
-    return () => window.removeEventListener('keydown', handleKey)
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKey)
+    }
   }, [isMenuOpen])
+
+  useEffect(() => {
+    const openNavigation = () => setIsMenuOpen(true)
+
+    window.addEventListener('open-navigation', openNavigation)
+
+    return () => {
+      window.removeEventListener('open-navigation', openNavigation)
+    }
+  }, [])
 
   return (
     <header
@@ -42,21 +59,38 @@ export default function Navbar() {
           : 'border-b border-transparent bg-transparent'
       }`}
     >
-      <div dir="ltr" className="mx-auto grid h-24 max-w-7xl grid-cols-2 items-center px-5 py-3 sm:px-8 lg:grid-cols-3">
+      <div
+        dir="ltr"
+        className="mx-auto grid h-24 max-w-7xl grid-cols-2 items-center px-5 py-3 sm:px-8 lg:grid-cols-3"
+      >
         <div className="flex items-center justify-self-start">
-          <NavLink to="/" className="group flex items-center" aria-label="سفرجية النخبة - الرئيسية">
+          <NavLink
+            to="/"
+            className="group flex items-center"
+            aria-label="سفرجية النخبة - الرئيسية"
+          >
             <img
               src={Logo}
               alt="شعار سفرجية النخبة"
               className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-20"
             />
-             <span className="font-heading text-xl font-bold tracking-wide text-gold sm:text-2xl">شركة النخبة</span>
+            <span className="font-heading text-xl font-bold tracking-wide text-gold sm:text-2xl">
+              شركة النخبة
+            </span>
           </NavLink>
         </div>
 
-        <nav dir="rtl" className="hidden text-center items-center justify-center gap-8 lg:flex" aria-label="التنقل الرئيسي">
+        <nav
+          dir="rtl"
+          className="hidden text-center items-center justify-center gap-8 lg:flex"
+          aria-label="التنقل الرئيسي"
+        >
           {navLinks.map((link) => (
-            <NavLink key={link.path} to={link.path} className={navLinkClasses}>
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={navLinkClasses}
+            >
               {link.label}
             </NavLink>
           ))}
@@ -82,11 +116,14 @@ export default function Navbar() {
 
       <div
         className={`fixed inset-0 top-24 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
-          isMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
+          isMenuOpen
+            ? 'pointer-events-auto opacity-100'
+            : 'pointer-events-none opacity-0'
         }`}
         onClick={() => setIsMenuOpen(false)}
         aria-hidden="true"
       />
+
       <nav
         id="mobile-navigation"
         dir="rtl"
@@ -101,13 +138,16 @@ export default function Navbar() {
             to={link.path}
             className={({ isActive }) =>
               `rounded-lg px-3 py-3 text-base transition-colors duration-200 ${
-                isActive ? 'bg-gold/10 text-gold' : 'text-ivory/80 hover:bg-bg-base hover:text-gold'
+                isActive
+                  ? 'bg-gold/10 text-gold'
+                  : 'text-ivory/80 hover:bg-bg-base hover:text-gold'
               }`
             }
           >
             {link.label}
           </NavLink>
         ))}
+
         <div className="mt-4 border-t border-gold-dark/20 pt-4">
           <WhatsAppButton className="w-full justify-center" />
         </div>
